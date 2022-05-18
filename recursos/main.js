@@ -56,7 +56,7 @@ function processFile(file) {
         fileReader.addEventListener('load', e => {
             const image = `
                 <div id="${id}" class="file-container">
-                    <p>https://www.paris.cl/on/demandware.static/-/Sites/es_CL/marketing/category-world-landing/<span>${file.name}</span></p>
+                    <p>https://www.paris.cl/on/demandware.static/-/Sites/es_CL/dw2c967659/marketing/category-world-landing/<span>${file.name}</span></p>
                 </div>
             `;
             const html = document.querySelector('#preview').innerHTML;
