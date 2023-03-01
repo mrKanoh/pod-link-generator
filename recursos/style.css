@@ -12,10 +12,53 @@
     --color-uno: #5ef4a1;
     --color-dos: #f0f0f0;
     --color-fondo: #1a1a1d;
+    --color-fondo-2: #28282b;
 }
 
 body{
     background-color: var(--color-fondo);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	width: 100%;
+	justify-content: space-around;
+    gap: .2rem;
+}
+
+nav ul li {
+    background-color: var(--color-fondo-2);
+    padding-block: 1rem;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-uno);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--color-uno);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.active-fondo{
+    background-color: var(--color-uno);
+}
+
+.active-letra{
+    color: var(--color-fondo);
 }
 
 .container{
@@ -32,23 +75,13 @@ body{
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
+    margin-bottom: 2rem;
 }
 
 .containerHead h1{
     color: var(--color-uno);
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    margin-top: .5rem;
-}
-
-.containerHead h1 span{
-    color: var(--color-fondo);
-    margin-top: -10px;
-    text-shadow: 0 0 3px var(--color-uno);
-    font-size: 3.7rem;
 }
 
 .containerHead .monkey{
@@ -118,19 +151,21 @@ body{
 }
 
 .btn_limpiar{
-    background-color: #28282b;
+    background-color: var(--color-fondo-2);
     color: var(--color-uno);
 }
 
 .btn_subir:hover,
-.btn_limpiar:hover{
+.btn_limpiar:hover,
+nav ul li:hover{
     filter: brightness(1.2);
     -webkit-filter: brightness(1.2);
     color: var(--color-fondo);
     box-shadow: 0 0 4px 0px var(--color-uno);
 }
 
-.btn_limpiar:hover{
+.btn_limpiar:hover,
+nav ul li:hover{
     color: var(--color-uno);
 }
 
@@ -147,4 +182,74 @@ body{
 
 .file-container p{
     color: rgb(194, 194, 194);
+}
+
+/* Estilos conversor */
+#drop-area {
+    width: 80%;
+    height: 500px;
+    border: 2px dashed var(--color-uno);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: .5rem;
+    color: var(--color-dos);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  #drop-area:hover {
+      background-color:black;
+      opacity: .1;
+      color:var(--color-dos);
+      cursor: pointer;
+  }
+  #preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  #preview-container img {
+    margin: 10px;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid var(--color-fondo-2);
+  }
+  #preview-container {
+    margin: 20px;
+  }
+  #preview-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #preview-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+  }
+  #preview-container li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #preview-container a {
+    background-color: var(--color-uno);
+    color: var(--color-fondo);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .card {
+background-color: var(--color-fondo-2);
+border-radius: 5px;
+padding: 10px;
+margin: 10px;
+box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }

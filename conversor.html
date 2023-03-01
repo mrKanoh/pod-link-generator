@@ -10,23 +10,26 @@
 <body>
     <nav>
         <ul>
-            <li class="active-fondo"><a class="active-letra" href="index.html">Pod link generador</a></li>
-            <li><a href="conversor.html">Conversor de imágenes</a></li>
+            <li><a href="index.html">Pod link generador</a></li>
+            <li class="active-fondo"><a class="active-letra" href="conversor.html">Conversor de imágenes</a></li>
         </ul>
     </nav>
+
     <section class="container">
         <article class="containerHead">
             <img class="monkey" src="https://media3.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.gif?cid=790b76119f3192b08125a352a492c3e207d378b4cb3e3cae&rid=giphy.gif&ct=g" alt="">
             <h1>tool kit</h1>
         </article>
-        <article class="containerDrop">
-            <h2>Arrastra y suelta imágenes</h2>
-            <button class="btn_subir">Seleccionar tus archivos</button>
-            <button class="btn_limpiar" onclick="location.reload()">Limpiar</button>
-            <input type="file" name="" id="input-file" hidden multiple />
-        </article>
-        <div id="preview"></div>
     </section>
-    <script src="./recursos/main.js"></script>
+
+    <div id="drop-area" ondragover="event.preventDefault()" ondrop="dropHandler(event)">
+        Arrastra y suelta tus imágenes aquí
+    </div>
+    
+    <div id="preview-container">
+        <!-- La vista previa de las imágenes se mostrará aquí -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/compressorjs@1.0.5/dist/compressor.js"></script>
+    <script src="./recursos/conversor.js"></script>
 </body>
 </html>
