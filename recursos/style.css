@@ -19,13 +19,13 @@ body {
     background-color: var(--color-fondo);
 }
 
-nav {
+.menu {
     display: flex;
     justify-content: center;
     width: 100vw;
 }
 
-nav ul {
+.menu div {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -34,7 +34,7 @@ nav ul {
     gap: .2rem;
 }
 
-nav ul li {
+.menu div a {
     background-color: var(--color-fondo-2);
     padding-block: 1rem;
     width: 100%;
@@ -44,20 +44,11 @@ nav ul li {
     color: var(--color-uno);
     text-transform: uppercase;
     font-weight: 600;
-}
-
-nav ul li a {
     text-decoration: none;
-    color: var(--color-uno);
-    text-transform: uppercase;
-    font-weight: 600;
 }
 
-.active-fondo {
+#active {
     background-color: var(--color-uno);
-}
-
-.active-letra {
     color: var(--color-fondo);
 }
 
